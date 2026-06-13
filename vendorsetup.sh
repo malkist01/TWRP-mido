@@ -17,16 +17,6 @@
 #
 # Please maintain this if you use this script or any part of it
 
-SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-
-FDEVICE='mido'
-
-if ! [ "$1" = "$FDEVICE" ]; then
-    if ! [ "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-        exit 1
-    fi
-fi
-
 export TW_DEFAULT_LANGUAGE='en'
 export OF_DONT_PATCH_ENCRYPTED_DEVICE='1'
 export FOX_USE_BASH_SHELL=0
